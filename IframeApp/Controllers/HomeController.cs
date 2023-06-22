@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace IframeApp.Controllers
@@ -27,6 +28,8 @@ namespace IframeApp.Controllers
             {
                 // handle the error
             }
+
+            var fleetIdClaim = User.FindFirst("fleetId");
 
             var cookies = Request.Cookies;
             return View();

@@ -27,6 +27,7 @@ namespace IframeApp.Controllers
                 var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, model.Username),
+                new Claim("fleetId", "1008"),
             };
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
